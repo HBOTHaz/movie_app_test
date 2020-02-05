@@ -5,7 +5,7 @@ import React from 'react';
 
 function Example() {
     return (
-        <b>I made it, just new Component!</b>
+        <b>I made it, just new Component! well. let's see...</b>
     )
 }
 
