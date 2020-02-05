@@ -1,12 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// HTML을 불러오는 기능, App.js 함수 App() 내의 내용을 그대로 HTML에 구현 (JSX 개념)
+// Just Only one rendering. and the one is <App />
+// so I can't type next to <App />. like <App /><Example />. it's not work.
