@@ -1,5 +1,28 @@
 import React from 'react';
+import axios from "axios";
+
+class App extends React.Component {
+  state = {
+    isLoading: true
+  };
+
+  // async() = 비동기, await의 내용이 완료되어야만 다음으로 넘어감
+  getMovies = async() => {
+    const movies = await axios.get("https://yts-proxy.now.sh/list_movies.json")
+  }
+
+  componentDidMount() {
+    this.getMovies();
+  }
+  render() {
+    const { isLoading } = this.state;
+    return <div>{isLoading ? "Loading" : "We are ready"}</div>;
+  }
+}
+
+/*
 import PropTypes from "prop-types";
+*/
 
 // npm start를 통해 실시간으로 보면서 코딩이 가능함
 
@@ -71,6 +94,7 @@ function App() {
 
 // 필수 작성해야 하는 부분
 // state는 object임을 기억할 것
+/*
 class App extends React.Component {
   state = {
     count: 0
@@ -92,6 +116,8 @@ class App extends React.Component {
   }
 
 }
+
+*/
 
 /* we can use like this, but it cause confuse.
 
